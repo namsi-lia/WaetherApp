@@ -6,11 +6,6 @@ Angular Weather App is a Progressive Web Application (PWA) to get weather foreca
 > **[Progressive Web Apps](https://web.dev/what-are-pwas/)** are built and enhanced with modern APIs to deliver enhanced capabilities, reliability, and installability while reaching anyone, anywhere, on any device with a single codebase.
 
 
-## Demo
-Check out the **live application** -> [https://angular-weather-pwa.web.app](https://angular-weather-pwa.web.app)
-
-![demo-optimized](https://user-images.githubusercontent.com/61401062/126057910-deb8d91f-6f94-4253-ab46-e40deafa148b.gif)
-
 
 ## Installation ⚙️
 | Android (Chrome) | iOS (Safari) |
@@ -114,29 +109,11 @@ I skipped writing test for this project.
 ### Accessibility ♿
 Not all components have properly defined [aria attributes](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA), visual focus indicators, etc.
 
-
-## Author: Sergio López Díaz ✍️
-You can find out more about me and my projects on:
-- [![](https://img.shields.io/badge/Follow-blue?style=social&logo=linkedin&logoColor=blue&labelColor=blue&color=gray)](https://www.linkedin.com/in/sldiaz04us "Sergio Lopez Diaz")
-- [![](https://img.shields.io/badge/Follow-blue?style=social&logo=twitter&logoColor=blue&labelColor=blue&color=gray)](https://twitter.com/sldiaz04us "Sergio Lopez Diaz")
-
-
 ## Support 🤝
 Give a ⭐️ if you like this project!
 
 Thanks a lot for stopping by and supporting me!
 
-
-## You may also like ⁉️
-- [Kanban Project Management](https://github.com/sldiaz04us/kanban-project-management "
-Project Management") - A web application to manage software development projects using Kanban.
-
-
 ## Credits
 Design inspired by [Diana Malewicz - Weather App UI illustrations](https://uxdesign.cc/create-a-weather-app-ui-with-3d-like-illustrations-4a6a5686c5ea)
 
-
-## License 📝
-Feel free to use my code on your project. Please put a reference to this repository.
-
-This project is under the MIT license. See the [LICENSE](https://github.com/sldiaz04us/angular-weather-app/blob/master/LICENSE) for more information.
