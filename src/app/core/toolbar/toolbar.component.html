@@ -1,0 +1,42 @@
+<section>
+  <mat-form-field appearance="outline">
+    <mat-label>Search</mat-label>
+    <input
+      #autocomplete
+      type="text"
+      placeholder="Search"
+      matInput
+      [formControl]="searchControl"
+      [matAutocomplete]="auto"
+    />
+    <mat-autocomplete
+      #auto="matAutocomplete"
+      [displayWith]="displayFn"
+      (optionSelected)="onSelectedOption($event)"
+    >
+      <ng-container *ngIf="isLoading">
+        <mat-option>
+          <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+        </mat-option>
+      </ng-container>
+      <ng-container *ngIf="!isLoading">
+        <mat-option [value]="gpsPrediction">
+          <mat-icon color="primary" aria-label="Share location icon">
+            share_location
+          </mat-icon>
+          Your location
+        </mat-option>
+        <mat-divider></mat-divider>
+        <mat-option
+          *ngFor="let prediction of searchPredictions"
+          [value]="prediction"
+        >
+          <mat-icon color="accent" aria-label="Place location icon">
+            {{ prediction.place_id ? "location_on" : "not_listed_location" }}
+          </mat-icon>
+          {{ prediction.description }}
+        </mat-option>
+      </ng-container>
+    </mat-autocomplete>
+  </mat-form-field>
+</section>

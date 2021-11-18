@@ -1,0 +1,37 @@
+<section class="middle">
+  <div class="humidity-wind normal-text-semibold">
+    <div class="humidity">
+      <img
+        src="assets/icons/dashboard/drops.svg"
+        alt="Drop"
+        width="32"
+        height="32"
+      />
+      <p>{{ current?.humidity }} %</p>
+    </div>
+    <div class="wind">
+      <img
+        src="assets/icons/dashboard/wind.svg"
+        alt="Wind"
+        width="32"
+        height="32"
+      />
+      <p>{{ current?.wind_speed }} {{ unitSymbol }}</p>
+    </div>
+  </div>
+
+  <div class="uv-pollution normal-text-semibold">
+    <div class="uv">
+      <div class="chip" [appUvIndex]="current?.uvi">
+        {{ current?.uvi | uvIndex }}
+      </div>
+      <p>UV</p>
+    </div>
+    <div class="pollution">
+      <div class="chip" [appAirPollution]="airPollutionIndex">
+        {{ airPollutionIndex | airPollution }}
+      </div>
+      <p>Pollution</p>
+    </div>
+  </div>
+</section>

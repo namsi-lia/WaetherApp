@@ -1,0 +1,18 @@
+<div mat-dialog-content>
+  <img
+    src="assets/icons/global/global-error.svg"
+    alt="Global error icon"
+    width="320"
+    height="180"
+  />
+
+  <h1 class="heading-2">Oops!</h1>
+  <p>Something went wrong, please try again</p>
+  <p *ngIf="data?.status">
+    <b>Status Code: {{ data.status }}</b>
+  </p>
+  <p class="error-message">{{ data?.message }}</p>
+</div>
+<div mat-dialog-actions>
+  <button mat-stroked-button mat-dialog-close color="primary">OK</button>
+</div>

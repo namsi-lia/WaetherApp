@@ -1,0 +1,68 @@
+<section>
+  <mat-tab-group
+    [animationDuration]="(webBreakpoints | async).matches ? '500' : '200'"
+    [disablePagination]="true"
+  >
+    <mat-tab label="Today">
+      <div class="today-forecast">
+        <div
+          *ngFor="let hourly of hourlyWeather; first as isFirst"
+          class="widget"
+        >
+          <p class="medium-text">
+            {{ isFirst ? "Now" : (hourly.dt | customDate: "shortTime") }}
+          </p>
+          <img
+            [src]="
+              'assets/icons/weather-conditions/' +
+              hourly.weather[0].icon +
+              '.svg'
+            "
+            alt="Weather Illustration"
+            width="80"
+            height="80"
+          />
+          <p class="medium-text">{{ hourly.temp | toInteger }}°</p>
+        </div>
+      </div>
+    </mat-tab>
+    <mat-tab label="Week">
+      <div class="week-forecast">
+        <div
+          *ngFor="let daily of dailyWeather; first as isFirst"
+          class="widget"
+        >
+          <div class="main">
+            <div class="date">
+              <div class="day normal-text-bold">
+                {{ isFirst ? "Today" : (daily.dt | customDate: "EEE, MMM d") }}
+              </div>
+              <div class="desc small-text-medium">
+                {{ daily.weather[0].description | titlecase }}
+              </div>
+            </div>
+            <img
+              [src]="
+                'assets/icons/weather-conditions/' +
+                daily.weather[0].icon +
+                '.svg'
+              "
+              width="64"
+              height="64"
+              alt="Weather Illustration"
+            />
+          </div>
+          <div class="temp">
+            <p class="max medium-text-semibold">
+              {{ daily.temp.max | toInteger }}{{ tempSymbol }}
+            </p>
+            <span>|</span>
+            <p class="min medium-text-semibold">
+              {{ daily.temp.min | toInteger }}{{ tempSymbol }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+</section>

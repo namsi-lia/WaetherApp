@@ -1,0 +1,238 @@
+/* You can add global styles to this file, and also import other style files */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body,
+html {
+  height: 100%;
+  color: var(--dashboard-dark);
+  background: var(--gradient-blue);
+}
+
+:root {
+  --vivid-blue: #131b81;
+  --blue: #2a1070;
+  --light-blue: #096777;
+  --gradient-yellow: linear-gradient(
+    180deg,
+    var(--light-yellow) 0%,
+    rgba(255, 255, 255, 0.8) 31.05%,
+    #ffffff 83.79%,
+    var(--light-yellow) 100%
+  );
+
+  --dark-gray: #5b7186;
+  --gray: #adb8c2;
+  --light-gray: #dee3e7;
+  --gradient-gray: linear-gradient(
+    180deg,
+    var(--light-gray) 0%,
+    rgba(255, 255, 255, 0.8) 31.05%,
+    #ffffff 83.79%,
+    var(--light-gray) 100%
+  );
+
+  --blue: #150570;
+  --light-blue: #3caef5;
+  --lighter-blue: #e1f3fe;
+  --gradient-blue: linear-gradient(
+    180deg,
+    var(--lighter-blue) 0%,
+    rgba(255, 255, 255, 0.8) 31.05%,
+    #ffffff 83.79%,
+    var(--lighter-blue) 100%
+  );
+
+  --dashboard-dark: #333866;
+  --dashboard-light: #adb1cc;
+
+  --dark-border: 1px solid var(--dashboard-dark);
+
+  --transition-speed: 600ms;
+}
+
+@import "~@angular/material/theming";
+
+// Foreground Elements
+
+// Light Theme Text
+$dark-text: #333866;
+$dark-primary-text: rgba($dark-text, 0.87);
+$dark-accent-text: rgba($dark-primary-text, 0.54);
+$dark-disabled-text: rgba($dark-primary-text, 0.38);
+$dark-dividers: rgba($dark-primary-text, 0.12);
+$dark-focused: rgba($dark-primary-text, 0.12);
+
+$mat-light-theme-foreground: (
+  base: black,
+  divider: $dark-dividers,
+  dividers: $dark-dividers,
+  disabled: $dark-disabled-text,
+  disabled-button: rgba($dark-text, 0.26),
+  disabled-text: $dark-disabled-text,
+  elevation: black,
+  secondary-text: $dark-accent-text,
+  hint-text: $dark-disabled-text,
+  accent-text: $dark-accent-text,
+  icon: $dark-accent-text,
+  icons: $dark-accent-text,
+  text: $dark-primary-text,
+  slider-min: $dark-primary-text,
+  slider-off: rgba($dark-text, 0.26),
+  slider-off-active: $dark-disabled-text,
+);
+
+// Background config
+// Light bg
+$light-background: #fafafa;
+$light-bg-darker-5: darken($light-background, 5%);
+$light-bg-darker-10: darken($light-background, 10%);
+$light-bg-darker-20: darken($light-background, 20%);
+$light-bg-darker-30: darken($light-background, 30%);
+$light-bg-lighter-5: lighten($light-background, 5%);
+$dark-bg-tooltip: lighten(#2c2c2c, 20%);
+$dark-bg-alpha-4: rgba(#2c2c2c, 0.04);
+$dark-bg-alpha-12: rgba(#2c2c2c, 0.12);
+
+$mat-light-theme-background: (
+  background: $light-background,
+  status-bar: $light-bg-darker-20,
+  app-bar: $light-bg-darker-5,
+  hover: $dark-bg-alpha-4,
+  card: $light-bg-lighter-5,
+  dialog: $light-bg-lighter-5,
+  tooltip: $dark-bg-tooltip,
+  disabled-button: $dark-bg-alpha-12,
+  raised-button: $light-bg-lighter-5,
+  focused-button: $dark-focused,
+  selected-button: $light-bg-darker-20,
+  selected-disabled-button: $light-bg-darker-30,
+  disabled-button-toggle: $light-bg-darker-10,
+  unselected-chip: $light-bg-darker-10,
+  disabled-list-option: $light-bg-darker-10,
+);
+
+@include mat-core();
+
+// Theme Config
+
+body {
+  --primary-color: #032f4b;
+  --primary-lighter-color: #d2ecfd;
+  --primary-darker-color: #372792;
+  --text-primary-color: #{$dark-primary-text};
+  --text-primary-lighter-color: #{$dark-primary-text};
+  --text-primary-darker-color: #{$dark-primary-text};
+}
+
+$mat-primary: (
+  main: #5d0e9d,
+  lighter: #170b49,
+  darker: #08273f,
+  200: #092130,
+  // For slide toggle,
+  contrast:
+    (
+      main: $dark-primary-text,
+      lighter: $dark-primary-text,
+      darker: $dark-primary-text,
+    ),
+);
+$theme-primary: mat-palette($mat-primary, main, lighter, darker);
+
+body {
+  --accent-color: #333866;
+  --accent-lighter-color: #c2c3d1;
+  --accent-darker-color: #202449;
+  --text-accent-color: #{$light-primary-text};
+  --text-accent-lighter-color: #{$dark-primary-text};
+  --text-accent-darker-color: #{$light-primary-text};
+}
+
+$mat-accent: (
+  main: #333866,
+  lighter: #c2c3d1,
+  darker: #202449,
+  200: #333866,
+  // For slide toggle,
+  contrast:
+    (
+      main: $light-primary-text,
+      lighter: $dark-primary-text,
+      darker: $light-primary-text,
+    ),
+);
+$theme-accent: mat-palette($mat-accent, main, lighter, darker);
+
+$theme: mat-light-theme($theme-primary, $theme-accent);
+
+// Theme Init
+@include angular-material-theme($theme);
+
+/*
+ * Typography
+ */
+.heading-1 {
+  font-size: 2em;
+  font-weight: 800;
+}
+.heading-2 {
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
+.large-text {
+  font-size: 1.2em;
+  font-weight: 600;
+}
+.large-text-semibold {
+  font-size: 1.3em;
+  font-weight: 700;
+}
+
+.medium-text {
+  font-size: 1em;
+  font-weight: 600;
+}
+.medium-text-semibold {
+  font-size: 1em;
+  font-weight: 700;
+}
+
+.normal-text {
+  font-size: 0.8em;
+  font-weight: 400;
+}
+.normal-text-semibold {
+  font-size: 0.8em;
+  font-weight: 700;
+  color: var(--dark-gray);
+}
+.normal-text-bold {
+  font-size: 0.8em;
+  font-weight: 800;
+}
+
+.small-text {
+  font-size: 0.6em;
+  font-weight: 400;
+  color: var(--dark-gray);
+}
+.small-text-medium {
+  font-size: 0.7em;
+  font-weight: 600;
+  color: var(--dark-gray);
+}
+
+/*
+ * Angular Material
+ */
+.mat-snack-bar-container {
+  background-color: var(--blue);
+  color: black;
+}

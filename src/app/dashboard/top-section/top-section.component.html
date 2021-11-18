@@ -1,0 +1,48 @@
+<section class="top">
+  <div class="city">
+    <p class="large-text-semibold">{{ geolocationName }}</p>
+    <p class="normal-text-semibold">{{ current?.dt | customDate }}</p>
+  </div>
+  <div class="temp-control">
+    <button
+      class="c-temp"
+      [class.active]="unit === 'metric'"
+      [disabled]="unit === 'metric'"
+      (click)="changeTempToCelsius()"
+    >
+      °C
+    </button>
+    <button
+      class="f-temp"
+      [class.active]="unit === 'imperial'"
+      [disabled]="unit === 'imperial'"
+      (click)="changeTempToFahrenheit()"
+    >
+      °F
+    </button>
+  </div>
+  <div class="weather-illustration">
+    <img
+      [src]="
+        'assets/icons/weather-conditions/' + current?.weather[0].icon + '.svg'
+      "
+      width="320"
+      height="180"
+      alt="Weather Illustration"
+    />
+    <div class="temp-info">
+      <div class="current-temp">
+        <p class="large-text-semibold">
+          {{ current?.temp | toInteger }}{{ tempSymbol }}
+        </p>
+        <p class="medium-text">{{ current?.weather[0].main }}</p>
+      </div>
+      <div class="feels-like">
+        <p class="medium-text">Feels Like</p>
+        <p class="medium-text-semibold">
+          {{ current?.feels_like | toInteger }}{{ tempSymbol }}
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

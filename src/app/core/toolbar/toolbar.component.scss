@@ -1,0 +1,21 @@
+:host {
+  display: grid;
+  grid-area: toolbar;
+  grid-template-columns: 1fr;
+
+  padding: 1rem;
+  max-height: 6em;
+
+  section .mat-form-field {
+    width: 100%;
+  }
+
+  /* large screens */
+  @media only screen and (min-width: 600px) {
+    margin-left: 5rem;
+
+    section .mat-form-field {
+      max-width: 20em;
+    }
+  }
+}

@@ -1,0 +1,81 @@
+.middle {
+  display: grid;
+  grid-area: main-middle;
+  grid-template-rows: 1fr 1fr;
+  grid-row-gap: 1em;
+
+  margin: 2em 0;
+
+  .humidity-wind {
+    display: grid;
+    grid-gap: 2em;
+    grid-template-columns: 1fr 1fr;
+    .humidity {
+      place-self: center end;
+      p {
+        color: var(--dark-gray);
+      }
+    }
+    .wind {
+      place-self: center start;
+      p {
+        color: var(--dark-gray);
+      }
+    }
+  }
+  .uv-pollution {
+    display: grid;
+    grid-gap: 2em;
+    grid-template-columns: 1fr 1fr;
+
+    .uv {
+      place-self: center end;
+    }
+    .pollution {
+      place-self: center start;
+    }
+    .uv,
+    .pollution {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .low,
+      .good {
+        border-color: #afcfaf;
+        background-color: #bfd9bf;
+      }
+      .uv-moderate,
+      .fair {
+        border-color: var(--yellow);
+        background-color: var(--light-yellow);
+      }
+      .high,
+      .air-moderate {
+        border-color: #ffb733;
+        background-color: #ffc04d;
+      }
+      .very-high,
+      .poor {
+        border-color: #ec4d4d;
+        background-color: #f37171;
+      }
+      .extreme,
+      .very-poor {
+        border-color: #d55bd5;
+        background-color: #da70da;
+      }
+    }
+    .uv p,
+    .pollution p {
+      color: var(--dark-gray);
+    }
+
+    .chip {
+      color: black;
+      border-radius: 15px;
+      padding: 3px 15px;
+    }
+  }
+}

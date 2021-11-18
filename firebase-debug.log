@@ -1,0 +1,51 @@
+[debug] [2021-09-07T14:56:34.617Z] ----------------------------------------------------------------------
+[debug] [2021-09-07T14:56:34.620Z] Command:       /usr/bin/node /usr/bin/firebase init
+[debug] [2021-09-07T14:56:34.621Z] CLI Version:   9.16.5
+[debug] [2021-09-07T14:56:34.621Z] Platform:      linux
+[debug] [2021-09-07T14:56:34.621Z] Node Version:  v12.22.5
+[debug] [2021-09-07T14:56:34.622Z] Time:          Tue Sep 07 2021 17:56:34 GMT+0300 (East Africa Time)
+[debug] [2021-09-07T14:56:34.622Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-09-07T14:56:34.702Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-09-07T14:56:34.703Z] > authorizing via signed-in user (namsilydia27@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /home/namsi/Downloads/WeatherApp
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  .firebaserc already has a default project, using angular-weather-pwa. 
+[debug] [2021-09-07T14:57:43.002Z] > refreshing access token with scopes: []
+[debug] [2021-09-07T14:57:43.004Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-09-07T14:57:44.637Z] <<< HTTP RESPONSE 400 {"pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","date":"Tue, 07 Sep 2021 14:57:44 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-09-07T14:57:44.650Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/angular-weather-pwa [none]
+[debug] [2021-09-07T14:57:45.714Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/angular-weather-pwa 401
+[debug] [2021-09-07T14:57:45.715Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/angular-weather-pwa {"error":{"code":401,"message":"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED"}}
+[debug] [2021-09-07T14:57:45.718Z] HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+[debug] [2021-09-07T14:57:46.416Z] FirebaseError: HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+    at module.exports (/usr/lib/node_modules/firebase-tools/lib/responseToError.js:38:12)
+    at Client.doRequest (/usr/lib/node_modules/firebase-tools/lib/apiv2.js:238:23)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at async Client.request (/usr/lib/node_modules/firebase-tools/lib/apiv2.js:96:20)
+    at async Object.getFirebaseProject (/usr/lib/node_modules/firebase-tools/lib/management/projects.js:290:21)
+    at async Object.doSetup [as project] (/usr/lib/node_modules/firebase-tools/lib/init/features/project.js:77:27)
+    at async init (/usr/lib/node_modules/firebase-tools/lib/init/index.js:19:9)
+[error] 
+[error] Error: Failed to get Firebase project angular-weather-pwa. Please make sure the project exists and your account has permission to access it.
