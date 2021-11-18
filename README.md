@@ -5,18 +5,6 @@ Angular Weather App is a Progressive Web Application (PWA) to get weather foreca
 
 > **[Progressive Web Apps](https://web.dev/what-are-pwas/)** are built and enhanced with modern APIs to deliver enhanced capabilities, reliability, and installability while reaching anyone, anywhere, on any device with a single codebase.
 
-
-
-## Installation ⚙️
-| Android (Chrome) | iOS (Safari) |
-|-------- | --- |
-|![pc-installation](https://user-images.githubusercontent.com/61401062/126021586-a24075ac-0ccc-44aa-8904-381bf64317a2.gif) | ![pc-installation](https://user-images.githubusercontent.com/61401062/126054994-4795e15c-1f0a-43f7-9b73-f284ba997a1b.gif)|
-
-| Computer (Chrome \| Microsoft Edge) |
-| -- |
-| ![pc-installation](https://user-images.githubusercontent.com/61401062/126054784-d8be0ca1-b6ff-468b-bbfd-00aa4c92866e.gif) |
-
-
 ## Features 🚀
 - Get weather forecast by user location.
 - Get the weather forecast by searching for a place.
@@ -44,7 +32,6 @@ Angular Weather App is a Progressive Web Application (PWA) to get weather foreca
 - [Angular](https://angular.io/) - An Application Design Framework and Development Platform for creating efficient and sophisticated single-page apps.
 - [Angular Material](https://material.angular.io/) - Material Design components for Angular.
 - [OpenWeather API](https://openweathermap.org/) - Fast and easy-to-work weather APIs.
-- [Figma](https://www.figma.com/) - Figma is the only platform that brings together powerful design features you already love and a more efficient workflow to boot.
 - [Places API](https://developers.google.com/maps/documentation/places/web-service/overview?hl=en_US) - Get detailed information about 100 million places.
 - [Geocoding API](https://developers.google.com/maps/documentation/geocoding/overview?hl=en_US) - Convert between addresses and geographic coordinates.
 - [Web APIs for Angular](https://ng-web-apis.github.io/) - High quality lightweight wrappers for native Web APIs for idiomatic use with Angular.
