@@ -109,10 +109,6 @@ I skipped writing test for this project.
 ### Accessibility ♿
 Not all components have properly defined [aria attributes](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA), visual focus indicators, etc.
 
-## Support 🤝
-Give a ⭐️ if you like this project!
-
-Thanks a lot for stopping by and supporting me!
 
 ## Credits
 Design inspired by [Diana Malewicz - Weather App UI illustrations](https://uxdesign.cc/create-a-weather-app-ui-with-3d-like-illustrations-4a6a5686c5ea)
